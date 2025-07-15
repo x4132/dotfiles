@@ -1,0 +1,10 @@
+font-family = "FiraCode Nerd Font Mono"
+font-size = 11
+
+# shell-integration = fish
+# command = /usr/bin/fish --login --interactive
+
+# gtk-titlebar = false
+# gtk-tabs-location = hidden
+
+scrollback-limit = 100000000

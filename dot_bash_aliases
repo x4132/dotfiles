@@ -1,0 +1,8 @@
+if [ -n "$WAYLAND_DISPLAY" ]; then
+    alias google-chrome="google-chrome-stable --ozone-platform=wayland"
+fi
+
+alias diskuse='du -k ~/ | sort -n ; echo " " ; quota -v'
+
+alias hyprexit="hyprctl dispatch exit"
+

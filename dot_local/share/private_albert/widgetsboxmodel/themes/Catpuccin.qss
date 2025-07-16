@@ -7,6 +7,7 @@
  */
 
 * {
+    border: none;
     color: #c6d0f5;
     background-color: #1e1e2e;
     font-family: "Articulat CF Medium";
@@ -21,16 +22,16 @@
 }
 
 #inputLine {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 4px;
     font-size: 28px;
     padding: 8px;
     selection-background-color: #414559;
 }
 
+
 #settingsButton {
     background-color: transparent;
-    color: #949cbb;
+    color: #4C566A;
 
     max-height: 13px;
     max-width: 13px;
@@ -42,17 +43,21 @@
 
 
 QListView {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 8px;
+    border: 1px solid #4C566A;
+    color: #5E81AC;
+    margin-top: 4px;
+    selection-background-color: #3B4252;
+    selection-color: #81A1C1;
 }
 
 QListView::item {
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 4px;
 }
 
 QListView::item:selected {
-    background-color: #414559;
+    background-color: #3B4252;
 }
 
 
@@ -94,7 +99,7 @@ QListView QScrollBar:vertical {
 }
 
 QListView QScrollBar::handle:vertical {
-    background: #51576d;
+    background: #4C566A;
     min-height: 24px;
 }
 

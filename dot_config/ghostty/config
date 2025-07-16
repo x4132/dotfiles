@@ -6,8 +6,5 @@ font-size = 11
 
 # gtk-titlebar = false
 # gtk-tabs-location = hidden
-#
-cursor-style = bar
-cursor-style-blink = false
 
 scrollback-limit = 100000000

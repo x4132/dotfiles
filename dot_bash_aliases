@@ -6,3 +6,7 @@ alias diskuse='du -k ~/ | sort -n ; echo " " ; quota -v'
 
 alias hyprexit="hyprctl dispatch exit"
 
+
+if [ "$TERM" == "xterm-kitty" ]; then
+    alias icat="kitten icat"
+fi

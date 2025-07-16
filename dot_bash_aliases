@@ -6,7 +6,12 @@ alias diskuse='du -k ~/ | sort -n ; echo " " ; quota -v'
 
 alias hyprexit="hyprctl dispatch exit"
 
+alias pipes="pipes-rs -p 3"
 
 if [ "$TERM" == "xterm-kitty" ]; then
     alias icat="kitten icat"
+fi
+
+if command -v zeditor >/dev/null 2>&1; then
+    alias zed='zeditor'
 fi

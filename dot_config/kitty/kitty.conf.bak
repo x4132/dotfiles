@@ -2533,8 +2533,3 @@ map cmd+shift+t new_tab_with_cwd
 #: }}}
 
 #: }}}
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
-include current-theme.conf
-# END_KITTY_THEME

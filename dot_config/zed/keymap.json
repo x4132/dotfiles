@@ -13,7 +13,8 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-l": "workspace::ActivatePaneRight"
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-s": "workspace::Save"
     }
   },
   {
@@ -41,7 +42,8 @@
       "ctrl-o": "workspace::Open"
     }
   },
-  { "context": "Editor && VimControl && !VimWaiting && !menu",
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // AI
       "space f m": "editor::Format",

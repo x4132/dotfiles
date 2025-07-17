@@ -64,8 +64,8 @@
       "spotify": " ",
     },
     "status-icons": {
-      "paused": "⏸",
-      "playing": "󰐊",
+      "playing": "⏸",
+      "paused": "󰐊",
     },
     "interval": "0.1",
   },

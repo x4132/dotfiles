@@ -372,7 +372,7 @@ window-rule {
 // add light transparency to select apps
 window-rule {
     draw-border-with-background false
-    opacity 0.96
+    opacity 0.98
 
     match app-id="code"
     match app-id="zed"
@@ -384,7 +384,7 @@ window-rule {
     match app-id="chromium"
     match app-id="zathura"
     match app-id="obsidian"
-    match app-id="zen"
+    // match app-id="zen"
     match app-id="Spotify"
     match app-id="albert"
 }

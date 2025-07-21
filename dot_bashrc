@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -23,6 +24,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export EDITOR="nvim"
+
+# Niri Compatibility extras
+if [ "$XDG_CURRENT_DESKTOP" = "niri" ]; then
+    export _JAVA_AWT_WM_NONREPARENTING=1 # for Ghidra
+fi
 
 # ROCm override to compile target 6800xt (I have a 6700xt)
 export HSA_OVERRIDE_GFX_VERSION=10.3.0

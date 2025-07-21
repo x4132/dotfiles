@@ -6,6 +6,12 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
+  //
+  //   "context": "(Editor || KeyContextView || Diagnostics) && !(InlineAssistEditor > Editor) && !menu && !(vim_mode == insert)",
+  //   "bindings": {
+  //     "space x": "pane::CloseActiveItem"
+  //   }
+  // },
   {
     "context": "Workspace",
     "bindings": {
@@ -33,13 +39,13 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "space x": "pane::CloseActiveItem",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-b": "workspace::ToggleLeftDock",
-      "ctrl-o": "workspace::Open"
+      "ctrl-o": "workspace::Open",
+      "space x": "pane::CloseActiveItem"
     }
   },
   {

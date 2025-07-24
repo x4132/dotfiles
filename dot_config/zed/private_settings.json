@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+      "enterprise_uri": null
+    },
+    "enabled_in_text_threads": false
+  },
   "ssh_connections": [
     {
       "host": "x4132-prod0",
@@ -31,6 +40,10 @@
     "dark": "Catppuccin Macchiato"
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat"
+    },
     "default_profile": "write",
     "default_model": {
       "provider": "deepseek",
@@ -39,7 +52,7 @@
   },
   "cursor_blink": false,
   "relative_line_numbers": true,
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "indent_guides": {
     "enabled": true,
     "coloring": "fixed"

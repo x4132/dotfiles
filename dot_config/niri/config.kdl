@@ -361,8 +361,8 @@ hotkey-overlay {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
 // Open the Firefox picture-in-picture player as floating by default.
+// Open the Pidgin buddy list as floating by default
 window-rule {
-    // This app-id regular expression will work for both:
     match title="^Picture-in-Picture$"
     open-floating true
 }

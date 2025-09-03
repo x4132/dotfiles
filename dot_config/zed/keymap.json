@@ -69,5 +69,11 @@
     "bindings": {
       "space a a": "assistant::QuoteSelection"
     }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-alt-n": "agent::NewThread"
+    }
   }
 ]

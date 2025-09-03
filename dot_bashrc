@@ -41,3 +41,9 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 alias claude="/home/msvc/.claude/local/claude"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/msvc/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export PATH="$PATH:/home/msvc/bin"

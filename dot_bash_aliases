@@ -8,8 +8,6 @@ alias hyprexit="hyprctl dispatch exit"
 
 alias pipes="pipes-rs -p 3"
 
-alias pgcp="rsync -a --info=progress2"
-
 if [ "$TERM" == "xterm-kitty" ]; then
     alias icat="kitten icat"
     alias s="kitten ssh"

@@ -82,7 +82,7 @@ output "DP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2560x1440@164.999"
+    mode "2560x1440@165"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1
@@ -361,14 +361,11 @@ hotkey-overlay {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
 // Open the Firefox picture-in-picture player as floating by default.
-// Open the Pidgin buddy list as floating by default
 window-rule {
-    match title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
-    match title="^Rename \".*\"$"
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
 

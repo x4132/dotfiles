@@ -7,7 +7,7 @@
   "margin-left": 200,
   "margin-right": 200,
 
-  "modules-left": ["niri/workspaces", "niri/window"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
@@ -77,12 +77,12 @@
   },
 
   "memory": {
-    "format": "  {percentage}%",
-    "interval": 1,
+      "format": "  {percentage}%",
+      "interval": 1
   },
   "cpu": {
-    "format": "  {usage}%",
-    "interval": 1,
+      "format": "  {usage}%",
+      "interval": 1
   },
 
   "custom/exit": {

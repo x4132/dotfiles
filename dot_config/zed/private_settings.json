@@ -12,7 +12,9 @@
       "host": "x4132-prod0",
       "projects": [
         {
-          "paths": ["/etc/nixos"]
+          "paths": [
+            "/etc/nixos"
+          ]
         }
       ]
     }
@@ -29,11 +31,52 @@
     "dark": "Catppuccin Macchiato"
   },
   "agent": {
-    "inline_assistant_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat"
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "vibe": {
+        "name": "vibe",
+        "tools": {
+                    "thinking": true,
+                    "terminal": true,
+                    "read_file": true,
+                    "project_notifications": true,
+                    "open": true,
+                    "now": true,
+                    "move_path": true,
+                    "grep": true,
+                    "list_directory": true,
+                    "find_path": true,
+                    "fetch": true,
+                    "edit_file": true,
+                    "diagnostics": true,
+                    "create_directory": true,
+                    "delete_path": true,
+                    "copy_path": true
+                },
+        "enable_all_context_servers": false,
+        "context_servers": {
+                    "mcp-server-shopify-dev": {
+                        "tools": {
+                            "get_started": true,
+                            "introspect_admin_schema": true,
+                            "search_dev_docs": true,
+                            "fetch_docs_by_path": true
+                        }
+                    },
+                    "mcp-server-context7": {
+                        "tools": {
+                            "resolve-library-id": true,
+                            "get-library-docs": true
+                        }
+                    }
+                }
+      }
     },
-    "default_profile": "write",
+    "inline_assistant_model": {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3.1"
+    },
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"
@@ -42,15 +85,9 @@
   "cursor_blink": false,
   "relative_line_numbers": true,
   "show_edit_predictions": true,
-   "edit_predictions": {
-      "mode": "subtle",
-      "copilot": {
-        "proxy": null,
-        "proxy_no_verify": null,
-        "enterprise_uri": null
-      },
-      "enabled_in_text_threads": false
-    },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "indent_guides": {
     "enabled": true,
     "coloring": "fixed"
@@ -72,5 +109,5 @@
     "enable_preview_from_file_finder": true,
     "enable_preview_from_code_navigation": false
   },
-  "ensure_final_newline_on_save": false,
+  "ensure_final_newline_on_save": false
 }

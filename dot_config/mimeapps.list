@@ -1,4 +1,5 @@
 [Default Applications]
+x-scheme-handler/bruno=bruno.desktop
 x-scheme-handler/http=zen.desktop
 x-scheme-handler/https=zen.desktop
 x-scheme-handler/chrome=zen.desktop
@@ -10,10 +11,6 @@ application/xhtml+xml=zen.desktop
 application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 x-scheme-handler/discord=vesktop.desktop
-x-scheme-handler/app.5ire=5ire.desktop
-x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
-application/pdf=zen.desktop
-x-scheme-handler/bruno=bruno.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
@@ -26,5 +23,3 @@ application/x-extension-shtml=zen.desktop;
 application/xhtml+xml=zen.desktop;
 application/x-extension-xhtml=zen.desktop;
 application/x-extension-xht=zen.desktop;
-image/png=zen.desktop;
-application/pdf=zen.desktop;

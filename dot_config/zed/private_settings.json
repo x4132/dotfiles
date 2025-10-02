@@ -76,7 +76,7 @@
       "provider": "openrouter",
       "model": "deepseek/deepseek-chat-v3.1"
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"

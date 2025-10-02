@@ -1,0 +1,41 @@
+set scrolloff=10
+set relativenumber
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+let mapleader = " "
+set surround
+set nerdtree
+set easymotion
+set notimeout
+set which-key
+
+
+"inoremap jk <Esc>
+nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprev<CR>
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Popup navigation
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+" Comment lines
+map <leader>c <action>(CommentByLineComment)
+
+" Open NERDTree (use q to exit)
+map <C-n> :NERDTreeToggle<CR>
+

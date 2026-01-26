@@ -10,17 +10,28 @@
   "ssh_connections": [
     {
       "host": "x4132-prod0",
+      "args": [],
       "projects": [
         {
-          "paths": [
-            "/etc/nixos"
-          ]
-        }
-      ]
-    }
+          "paths": ["/etc/nixos"],
+        },
+      ],
+    },
+    {
+      "host": "janknuc",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/msvc"],
+        },
+        {
+          "paths": ["/home/msvc/handout/./"],
+        },
+      ],
+    },
   ],
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "vim_mode": true,
   "ui_font_size": 16,
@@ -28,7 +39,7 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Macchiato",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Macchiato",
   },
   "agent": {
     "always_allow_tool_actions": true,
@@ -36,61 +47,61 @@
       "vibe": {
         "name": "vibe",
         "tools": {
-                    "thinking": true,
-                    "terminal": true,
-                    "read_file": true,
-                    "project_notifications": true,
-                    "open": true,
-                    "now": true,
-                    "move_path": true,
-                    "grep": true,
-                    "list_directory": true,
-                    "find_path": true,
-                    "fetch": true,
-                    "edit_file": true,
-                    "diagnostics": true,
-                    "create_directory": true,
-                    "delete_path": true,
-                    "copy_path": true
-                },
+          "thinking": true,
+          "terminal": true,
+          "read_file": true,
+          "project_notifications": true,
+          "open": true,
+          "now": true,
+          "move_path": true,
+          "grep": true,
+          "list_directory": true,
+          "find_path": true,
+          "fetch": true,
+          "edit_file": true,
+          "diagnostics": true,
+          "create_directory": true,
+          "delete_path": true,
+          "copy_path": true,
+        },
         "enable_all_context_servers": false,
         "context_servers": {
-                    "mcp-server-shopify-dev": {
-                        "tools": {
-                            "get_started": true,
-                            "introspect_admin_schema": true,
-                            "search_dev_docs": true,
-                            "fetch_docs_by_path": true
-                        }
-                    },
-                    "mcp-server-context7": {
-                        "tools": {
-                            "resolve-library-id": true,
-                            "get-library-docs": true
-                        }
-                    }
-                }
-      }
+          "mcp-server-shopify-dev": {
+            "tools": {
+              "get_started": true,
+              "introspect_admin_schema": true,
+              "search_dev_docs": true,
+              "fetch_docs_by_path": true,
+            },
+          },
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true,
+            },
+          },
+        },
+      },
     },
     "inline_assistant_model": {
       "provider": "openrouter",
-      "model": "deepseek/deepseek-chat-v3.1"
+      "model": "deepseek/deepseek-v3.2",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
-    }
+      "model": "claude-opus-4.5",
+    },
   },
   "cursor_blink": false,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "show_edit_predictions": true,
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
   "indent_guides": {
     "enabled": true,
-    "coloring": "fixed"
+    "coloring": "fixed",
   },
   "always_treat_brackets_as_autoclosed": true,
   "format_on_save": "off",
@@ -101,13 +112,28 @@
     "inline_blame": {
       "enabled": true,
       "show_commit_summary": true,
-      "delay_ms": 5000
-    }
+      "delay_ms": 5000,
+    },
   },
   "preview_tabs": {
     "enabled": true,
     "enable_preview_from_file_finder": true,
-    "enable_preview_from_code_navigation": false
+    "enable_keep_preview_on_code_navigation": false,
   },
-  "ensure_final_newline_on_save": false
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "cn"],
+      },
+    },
+  },
+  "languages": {
+    "CSS": {
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "!vscode-css-language-server",
+      ],
+    },
+  },
+  "ensure_final_newline_on_save": false,
 }

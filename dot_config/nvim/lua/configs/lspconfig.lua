@@ -1,68 +1,23 @@
--- load defaults i.e lua_lsp
+-- load defaults (sets up capabilities, on_init, on_attach via LspAttach autocmd)
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require("lspconfig")
-
+-- servers with default config
 local servers = {
     "html",
-    "cssls",
     "tailwindcss",
-    "sqlls",
     "ts_ls",
     "jsonls",
-    "eslint",
     -- "htmx",
-    "taplo",
-    "gopls",
     "clangd",
-    "tinymist",
-    "bazelrc_lsp"
 }
-local nvlsp = require("nvchad.configs.lspconfig")
 
--- lsps with default config
+-- enable servers with default config
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup({
-        on_attach = nvlsp.on_attach,
-        on_init = nvlsp.on_init,
-        capabilities = nvlsp.capabilities,
-    })
+    vim.lsp.enable(lsp)
 end
 
--- lspconfig.emmet_ls.setup({
---     on_attach = nvlsp.on_attach,
---     on_init = nvlsp.on_init,
---     capabilities = nvlsp.capabilities,
---     filetypes = {
---         "css",
---         "eruby",
---         "html",
---         "javascript",
---         "javascriptreact",
---         "less",
---         "sass",
---         "scss",
---         "svelte",
---         "pug",
---         "typescriptreact",
---         "vue",
---         "templ"
---     },
---     init_options = {
---         html = {
---             options = {
---                 -- for possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
---                 ["bem.enabled"] = true,
---                 ["jsx.enabled"] = true,
---             },
---         },
---     },
--- })
-
-lspconfig.cssls.setup({
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+-- cssls with custom settings
+vim.lsp.config("cssls", {
     settings = {
         css = {
             validate = true,
@@ -74,44 +29,37 @@ lspconfig.cssls.setup({
             validate = true,
             lint = {
                 unknownAtRules = "ignore",
-            }
+            },
         },
         less = {
             validate = true,
             lint = {
                 unknownAtRules = "ignore",
-            }
+            },
         },
     },
 })
+vim.lsp.enable("cssls")
 
-lspconfig.lua_ls.setup({
-    on_init = nvlsp.on_init,
-    on_attach = nvlsp.on_attach,
-    capabilities = nvlsp.capabilities,
+-- lua_ls with custom settings (extends NvChad defaults)
+vim.lsp.config("lua_ls", {
     settings = {
-        runtime = {
-            version = "LuaJIT",
-        },
-        -- Make the server aware of Neovim runtime files
-        workspace = {
-            checkThirdParty = false,
-            library = {
-                vim.env.VIMRUNTIME,
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
             },
-        },
-        format = {
-            defaultConfig = {
-                indent_style = "space",
-                indent_size = 4,
+            workspace = {
+                checkThirdParty = false,
+                library = {
+                    vim.env.VIMRUNTIME,
+                },
+            },
+            format = {
+                defaultConfig = {
+                    indent_style = "space",
+                    indent_size = "4",
+                },
             },
         },
     },
 })
-
--- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }

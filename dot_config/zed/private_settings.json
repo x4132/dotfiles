@@ -13,36 +13,62 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/etc/nixos"],
+          "paths": [
+            "/etc/nixos"
+          ]
         },
-      ],
+        {
+          "paths": [
+            "/home/msvc/.clawdbot"
+          ]
+        }
+      ]
     },
     {
       "host": "janknuc",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/msvc"],
+          "paths": [
+            "/home/msvc"
+          ]
         },
         {
-          "paths": ["/home/msvc/handout/./"],
+          "paths": [
+            "/home/msvc/attachments"
+          ]
         },
-      ],
+        {
+          "paths": [
+            "/home/msvc/handout/./"
+          ]
+        }
+      ]
     },
+    {
+      "host": "orb",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/msvc/syrup"
+          ]
+        }
+      ]
+    }
   ],
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Macchiato",
+    "light": "One Light",
     "dark": "Catppuccin Macchiato",
   },
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "profiles": {
       "vibe": {
         "name": "vibe",
@@ -84,19 +110,20 @@
       },
     },
     "inline_assistant_model": {
-      "provider": "openrouter",
-      "model": "deepseek/deepseek-v3.2",
+      "provider": "copilot_chat",
+      "model": "grok-code-fast-1",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-opus-4.5",
+      "model": "claude-opus-4.6",
     },
   },
   "cursor_blink": false,
   "relative_line_numbers": "enabled",
   "show_edit_predictions": true,
   "edit_predictions": {
+    "provider": "sweep",
     "mode": "subtle",
   },
   "indent_guides": {

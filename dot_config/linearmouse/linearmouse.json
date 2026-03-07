@@ -1,72 +1,80 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
-      "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 1.5
-      },
       "if" : {
         "device" : {
-          "productID" : "0xb019",
-          "serialNumber" : "037116C3137A4952",
-          "productName" : "MX Master 2S",
           "category" : "mouse",
+          "productID" : "0xb019",
+          "productName" : "MX Master 2S",
+          "serialNumber" : "037116C3137A4952",
           "vendorID" : "0x46d"
         }
       },
+      "pointer" : {
+        "acceleration" : 1.5,
+        "disableAcceleration" : true
+      },
       "scrolling" : {
-        "reverse" : true,
-        "speed" : {
-          "vertical" : 0
+        "acceleration" : {
+          "vertical" : 1
         },
         "distance" : {
           "vertical" : 3
         },
-        "acceleration" : {
-          "vertical" : 1
+        "reverse" : true,
+        "speed" : {
+          "vertical" : 0
         }
       }
     },
     {
       "if" : {
         "device" : {
-          "productID" : "0x0",
           "category" : "trackpad",
-          "vendorID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
-        }
-      },
-      "scrolling" : {
-        "reverse" : {
-          "horizontal" : false
+          "productID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0"
         }
       },
       "pointer" : {
         "disableAcceleration" : false,
         "speed" : 0.0986
+      },
+      "scrolling" : {
+        "reverse" : {
+          "horizontal" : false
+        }
       }
     },
     {
       "if" : {
         "device" : {
-          "serialNumber" : "118831423934",
-          "vendorID" : "0x46d",
+          "category" : "mouse",
           "productID" : "0xc08b",
           "productName" : "G502 HERO Gaming Mouse",
-          "category" : "mouse"
+          "serialNumber" : "118831423934",
+          "vendorID" : "0x46d"
         }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
       },
       "scrolling" : {
         "reverse" : {
           "vertical" : true
         }
-      },
-      "pointer" : {
-        "disableAcceleration" : true
       }
     },
     {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x8a",
+          "productName" : "Razer Viper Mini",
+          "vendorID" : "0x1532"
+        }
+      },
       "pointer" : {
         "acceleration" : 1.3,
         "disableAcceleration" : true
@@ -81,13 +89,65 @@
         "speed" : {
           "vertical" : 0
         }
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : true
       },
       "if" : {
         "device" : {
-          "productID" : "0x8a",
-          "productName" : "Razer Viper Mini",
-          "vendorID" : "0x1532",
-          "category" : "mouse"
+          "category" : "mouse",
+          "productID" : "0xd026",
+          "productName" : "Keychron Link-KM",
+          "vendorID" : "0x3434"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.5,
+        "disableAcceleration" : true
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xd064",
+          "productName" : "Keychron M6",
+          "serialNumber" : "1234567890",
+          "vendorID" : "0x3434"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.5,
+        "disableAcceleration" : true
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
         }
       }
     }

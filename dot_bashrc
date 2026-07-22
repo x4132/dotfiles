@@ -45,3 +45,8 @@ export PATH="$PATH:~/bin/"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/msvc/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/johndoe/.lmstudio/bin"
+# End of LM Studio CLI section
+

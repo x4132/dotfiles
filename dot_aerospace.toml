@@ -146,8 +146,8 @@ alt-shift-semicolon = 'mode service'
 6 = 'main'
 7 = 'main'
 8 = 'main'
-9 = [2,1]
-10 = [2,1]
+9 = [1,2]
+10 = [1,2]
 
 # Workspace back and forth
 # alt-tab = 'workspace-back-and-forth'

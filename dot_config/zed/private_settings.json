@@ -7,6 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "agent_servers": {
+    "pi-acp": {
+      "default_config_options": {
+        "thought_level": "low",
+        "model": "openai-codex/gpt-5.6-sol"
+      },
+      "type": "registry"
+    },
+    "amp-acp": {
+      "default_config_options": {
+        "effort": "xhigh"
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left"
@@ -20,7 +45,11 @@
   "git_panel": {
     "dock": "left"
   },
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Catppuccin Macchiato"
+  },
   "ssh_connections": [
     {
       "host": "x4132-prod0",
@@ -64,7 +93,7 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Latte (Blur)",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato",
   },
   "agent": {
@@ -113,18 +142,19 @@
       },
     },
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "grok-code-fast-1",
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-v4-flash",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.6",
+      "enable_thinking": true,
+      "provider": "openrouter",
+      "model": "anthropic/claude-opus-4.7",
     },
   },
   "cursor_blink": false,
   "relative_line_numbers": "enabled",
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "edit_predictions": {
     "provider": "zed",
     "mode": "subtle",
@@ -134,6 +164,9 @@
     "coloring": "fixed",
   },
   "always_treat_brackets_as_autoclosed": true,
+  // LSP on-type formatting can insert stray indents while typing ")" etc.
+  // (e.g. https://github.com/biomejs/biome-zed/issues/164)
+  "use_on_type_format": false,
   "format_on_save": "off",
   "formatter": "auto",
   "git": {

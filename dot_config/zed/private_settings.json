@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "split",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -56,37 +57,60 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/etc/nixos"],
+          "paths": [
+            "/etc/nixos"
+          ]
         },
         {
-          "paths": ["/home/msvc/.clawdbot"],
-        },
-      ],
+          "paths": [
+            "/home/msvc/.clawdbot"
+          ]
+        }
+      ]
     },
     {
       "host": "janknuc",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/msvc"],
+          "paths": [
+            "/home/msvc"
+          ]
         },
         {
-          "paths": ["/home/msvc/attachments"],
+          "paths": [
+            "/home/msvc/attachments"
+          ]
         },
         {
-          "paths": ["/home/msvc/handout/./"],
-        },
-      ],
+          "paths": [
+            "/home/msvc/handout/./"
+          ]
+        }
+      ]
     },
     {
       "host": "orb",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/msvc/syrup"],
-        },
-      ],
+          "paths": [
+            "/home/msvc/syrup"
+          ]
+        }
+      ]
     },
+    {
+      "host": "bigger-data",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/johndoe/x-event-reassembler"
+          ]
+        }
+      ]
+    }
   ],
   "vim_mode": true,
   "ui_font_size": 16,
@@ -145,11 +169,11 @@
       "provider": "openrouter",
       "model": "deepseek/deepseek-v4-flash",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "enable_thinking": true,
       "provider": "openrouter",
-      "model": "anthropic/claude-opus-4.7",
+      "model": "x-ai/grok-4.5",
     },
   },
   "cursor_blink": false,

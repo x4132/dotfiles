@@ -22,7 +22,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export EDITOR="nvim"
+export EDITOR="zeditor"
 
 # ROCm override to compile target 6800xt (I have a 6700xt)
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
@@ -41,6 +41,7 @@ fi
 
 # bin
 export PATH="$PATH:~/bin/"
+export PATH="$PATH:~/.local/bin/"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/msvc/.lmstudio/bin"
@@ -50,3 +51,4 @@ export PATH="$PATH:/home/msvc/.lmstudio/bin"
 export PATH="$PATH:/Users/johndoe/.lmstudio/bin"
 # End of LM Studio CLI section
 
+eval "$(direnv hook bash)"

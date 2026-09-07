@@ -7,114 +7,59 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "markdown_preview_font_size": 20.0,
+  "markdown_preview_code_font_family": ".ZedMono",
+  "markdown_preview_font_family": ".ZedSans",
+  "terminal": {
+    "font_size": 18.0,
+  },
   "diff_view_style": "split",
   "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+    "diagnostics": true,
+    "metrics": true,
   },
   "agent_servers": {
     "pi-acp": {
       "default_config_options": {
         "thought_level": "low",
-        "model": "openai-codex/gpt-5.6-sol"
+        "model": "openai-codex/gpt-5.6-sol",
       },
-      "type": "registry"
+      "type": "registry",
     },
     "amp-acp": {
       "default_config_options": {
-        "effort": "xhigh"
+        "amp-mode": "high",
       },
-      "type": "registry"
+      "type": "registry",
     },
     "codex-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "claude-acp": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Macchiato",
   },
-  "ssh_connections": [
-    {
-      "host": "x4132-prod0",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/etc/nixos"
-          ]
-        },
-        {
-          "paths": [
-            "/home/msvc/.clawdbot"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "janknuc",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/msvc"
-          ]
-        },
-        {
-          "paths": [
-            "/home/msvc/attachments"
-          ]
-        },
-        {
-          "paths": [
-            "/home/msvc/handout/./"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "orb",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/msvc/syrup"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "bigger-data",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/johndoe/x-event-reassembler"
-          ]
-        }
-      ]
-    }
-  ],
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 22.0,
+  "buffer_font_size": 18.0,
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
@@ -125,46 +70,7 @@
     "tool_permissions": {
       "default": "allow",
     },
-    "profiles": {
-      "vibe": {
-        "name": "vibe",
-        "tools": {
-          "thinking": true,
-          "terminal": true,
-          "read_file": true,
-          "project_notifications": true,
-          "open": true,
-          "now": true,
-          "move_path": true,
-          "grep": true,
-          "list_directory": true,
-          "find_path": true,
-          "fetch": true,
-          "edit_file": true,
-          "diagnostics": true,
-          "create_directory": true,
-          "delete_path": true,
-          "copy_path": true,
-        },
-        "enable_all_context_servers": false,
-        "context_servers": {
-          "mcp-server-shopify-dev": {
-            "tools": {
-              "get_started": true,
-              "introspect_admin_schema": true,
-              "search_dev_docs": true,
-              "fetch_docs_by_path": true,
-            },
-          },
-          "mcp-server-context7": {
-            "tools": {
-              "resolve-library-id": true,
-              "get-library-docs": true,
-            },
-          },
-        },
-      },
-    },
+    "profiles": {},
     "inline_assistant_model": {
       "provider": "openrouter",
       "model": "deepseek/deepseek-v4-flash",
@@ -188,9 +94,6 @@
     "coloring": "fixed",
   },
   "always_treat_brackets_as_autoclosed": true,
-  // LSP on-type formatting can insert stray indents while typing ")" etc.
-  // (e.g. https://github.com/biomejs/biome-zed/issues/164)
-  "use_on_type_format": false,
   "format_on_save": "off",
   "formatter": "auto",
   "git": {
@@ -221,6 +124,16 @@
         "!vscode-css-language-server",
       ],
     },
+  },
+  "file_types": {
+    "Helm": [
+      "**/templates/**/*.tpl",
+      "**/templates/**/*.yaml",
+      "**/templates/**/*.yml",
+      "**/helmfile.d/**/*.yaml",
+      "**/helmfile.d/**/*.yml",
+      "**/values*.yaml",
+    ],
   },
   "ensure_final_newline_on_save": false,
 }

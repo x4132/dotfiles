@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Kick off AWS SSO and gcloud logins in parallel. Each opens its own
+# browser tab; complete them all, then this script reports the results.
+# --update-adc writes the gcloud credentials into ADC too, so no
+# separate `gcloud auth application-default login` is needed.
+set -u
+
+aws sso login --profile zftc &
+aws_pid=$!
+
+gcloud auth login --update-adc &
+gcloud_pid=$!
+
+status=0
+
+wait "$aws_pid"    || { echo "FAILED: aws sso login --profile zftc" >&2; status=1; }
+wait "$gcloud_pid" || { echo "FAILED: gcloud auth login --update-adc" >&2; status=1; }
+
+if [ "$status" -eq 0 ]; then
+    echo "All logins completed successfully."
+fi
+exit "$status"
